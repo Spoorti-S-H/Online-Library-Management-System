@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Student Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+      
+  <style type="text/css">
+  section
+  {
+    margin-top: -20px;
+  }
+  </style>
+</head>
+<body>
+
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand active">ONLINE LIBRARY MANAGEMENT SYSTEM</a>
+            </div>
+    
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="books.html">BOOKS</a></li> 
+              <li><a href="feedback.html">ABOUT US</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+              <li><a href="studentlogin.html"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li>
+              
+              <li><a href="registration.html"><span class="glyphicon glyphicon-user"> SIGNUP</span></a></li>
+            </ul>
+
+        </div>
+      </nav>
+    
+    
+  
+<!-----------
+<header style="height: 90px;">
+  
+<div class="logo">
+      <h1 style="color: white; font-size: 25px;word-spacing: 10px; line-height: 80px;margin-top: 20px;">ONLINE LIBRARY MANAGEMENT SYSTEM</h1>
+    </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="">BOOKS</a></li>
+          <li><a href="student_login (1).html">STUDENT-LOGIN</a></li>
+          <li><a href="registration (1) .html">REGISTRATION</a></li>
+          <li><a href="">FEEDBACK</a></li>
+        </ul>
+      </nav>
+</header>----->
+
+<section>
+  <div class="log_img">
+    
+   <br>
+    <div class="box1">
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">Library Management System</h1>
+        <h1 style="text-align: center; font-size: 25px;">User Login Form</h1><br>
+      
+      <form name="login" class="login" onsubmit="return formValidation()">
+        
+        
+        <div class="login">
+          <input class="form-control" type="text" name="name" id="name" placeholder="Username" required=""> <br>
+          <input class="form-control" type="password" name="password" id="password" placeholder="Password" required=""> <br>
+          <input class="btn btn-default" type="submit" name="submit" value="Login" style="color: black; width: 70px; height: 30px"> 
+        </div>
+      
+      <p style="color: white; padding-left: 15px;">
+        <br><br><br>
+        <a style="color:white;" href="">Forgot password?</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        New to this website?<a style="color: white;" href="registration.html">Sign Up</a>
+      </p>
+
+    </form>
+    </div>
+  </div>
+
+
+<script>
+  const name = document.getElementById("name");
+  const password = document.getElementById("password");
+
+  // function for form varification 
+function formValidation() {
+
+  // checking name length
+  if (name.value.length < 2 || name.value.length > 20) {
+    alert("Name length should be more than 2 and less than 21");
+    name.focus();
+    return false;
+  }
+  
+  
+  // checking password
+  if (!password.value.match(/^.{5,15}$/)) {
+    alert("Password length must be between 5-15 characters!");
+    password.focus();
+    return false;
+  }
+  return true;
+}
+</script>
+</section>
+
+</body>
+</html>
